@@ -98,7 +98,7 @@ if ($dirok && $_GET['dir'] == 'public/' || request_okay($_GET, 'public-box')) {
     <!-- /breadcrumb -->
 
     <!-- Table listing -->
-    <?php if(isset($_SESSION['user'])) {
+    <?php if(isset($_SESSION['user']) && !request_okay($_GET, 'public-box')) {
         include('includes/authorized_users.php');
     } else if(request_okay($_GET, 'public-box')) {
         include('includes/public_users.php');
