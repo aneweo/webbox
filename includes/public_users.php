@@ -8,12 +8,10 @@ if (!empty($dirs) || !empty($files)) { // if dir is not empty?>
         <!-- Table listing -->
         <table class="tbl table table-bordered sortable">
             <tr>
-                <?php if($dirok || $isPublic) {?>
                 <th class="sorttable_nosort" width="70px;">
                     <a href="javascript:selectToggle(true, 'checkbox-form');">All</a> /
                     <a href="javascript:selectToggle(false, 'checkbox-form');">None</a>
                 </th>
-                <?php } ?>
                 <th>Name</th>
                 <th>Size</th>
                 <th>Last modified</th>
