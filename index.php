@@ -3,8 +3,8 @@ require_once('includes/global.inc.php');
 include_once('includes/helpers.php');
 
 // Check for authorization
-if (!isset($_SESSION['user']) && !request_okay($_GET, 'public-box')) {
-    if (!isset($_SESSION['user-email']) && isset($_GET['key'])) {
+if (!isset($_SESSION['user']) && !request_okay($_GET, 'public-box') && !isset($_SESSION['user-email'])) {
+    if (!isset($_SESSION['user-email']) && isset($_GET['key']) ) { // If the user goes straight to a URL without logging in
         $_SESSION['alert'] =
             '<div class="alert fade in alert-error">
                 <button class="close" data-dismiss="alert" type="button">&times;</button>
