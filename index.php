@@ -99,11 +99,11 @@ if ($dirok && $_GET['dir'] == 'public/' || request_okay($_GET, 'public-box')) {
 
     <!-- Table listing -->
     <?php if(isset($_SESSION['user']) && !request_okay($_GET, 'public-box')) {
-        include('includes/authorized_users.php');
+        include_once('includes/authorized_users.php');
     } else if(request_okay($_GET, 'public-box')) {
-        include('includes/public_users.php');
+        include_once('includes/public_users.php');
     } else if(request_okay($_GET, 'key')) {
-        include('includes/private_users.php');
+        include_once('includes/private_users.php');
     }?>
     <!-- /Table listing -->
 
