@@ -86,7 +86,7 @@ if (isset($_SESSION['alert'])) {
 <p>Log in with <strong>private key</strong></p>
 <form method="post" action="login.php" class="well form-inline">
     <input type="email" class="input-medium" name="email" placeholder="example@mail.com" required/>
-    <input type="password" class="input-large" name="key" placeholder="private key" required/>
+    <input type="text" class="input-large" name="key" placeholder="private key" <?php if (isset($_SESSION['key'])) echo 'value="' . $_SESSION['key'] . '"'; ?> required/>
     <button type="submit" name="submit" class="btn">Submit</button>
 </form>
 <hr>

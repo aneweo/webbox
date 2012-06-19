@@ -10,6 +10,7 @@ if (!isset($_SESSION['user']) && !request_okay($_GET, 'public-box') && !isset($_
                 <button class="close" data-dismiss="alert" type="button">&times;</button>
                 Please confirm your email address with the key <strong>' . $_GET['key'] .
             "</strong></div>\n";
+        $_SESSION['key'] = $_GET['key'];
     }
     header("Location: login.php");
     die();
