@@ -11,9 +11,12 @@ if (!isset($_SESSION['user']) && !request_okay($_GET, 'public-box') && !isset($_
                 Please confirm your email address with the key <strong>' . $_GET['key'] .
             "</strong></div>\n";
         $_SESSION['key'] = $_GET['key'];
+        header("Location: login.php#private-key");
+        die();
+    } else{
+        header("Location: login.php");
+        die();
     }
-    header("Location: login.php");
-    die();
 }
 
 include_once('includes/dirlisting.php');
