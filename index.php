@@ -13,7 +13,7 @@ if (!isset($_SESSION['user']) && !request_okay($_GET, 'public-box') && !isset($_
         $_SESSION['key'] = $_GET['key'];
         header("Location: login.php#private-key");
         die();
-    } else{
+    } else {
         header("Location: login.php");
         die();
     }
